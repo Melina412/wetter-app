@@ -5,8 +5,8 @@ const Home = () => {
   const [weatherData, setWeatherData] = useState();
   const [lat, setLat] = useState(52.5170365);
   const [lon, setLon] = useState(13.3888599);
-  const [windDirection, setWindDirection] = useState("");
   const [city, setCity] = useState("Berlin");
+  const [windDirection, setWindDirection] = useState("");
   const wind_deg = weatherData ? weatherData.wind.deg : "";
   //   console.log({ wind_deg });
 
@@ -19,7 +19,7 @@ const Home = () => {
         setLon(selected_city.lon),
         setCity(selected_city.city))
       : console.log("Stadt nicht gefunden");
-    console.log({ selected_city });
+    // console.log({ selected_city });
     // console.log("lat, lon:", lat, lon);
   };
 
@@ -63,8 +63,7 @@ const Home = () => {
     // useEffect wird jedes mal aktualisiert, wenn lat oder lon sich ändern
     // wenn man stattdessen getGeodata() hier aufrufen würde, dann hätte man einen infinite loop ^^
   }, [lat, lon]);
-  console.log({ weatherData });
-  getWindDirection();
+  //   console.log({ weatherData });
 
   return (
     <section>
