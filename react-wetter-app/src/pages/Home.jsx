@@ -35,7 +35,7 @@ const Home = () => {
 
   return (
     <section>
-      <article>
+      <article className="buttons">
         <button onClick={() => getGeodata("Berlin")}>Berlin</button>
         <button onClick={() => getGeodata("Hamburg")}>Hamburg</button>
         <button onClick={() => getGeodata("Munich")}>München</button>
@@ -45,6 +45,7 @@ const Home = () => {
       <div className="beschreibung">
         <p>{weatherData ? weatherData.weather[0].description : ""}</p>
       </div>
+
       <div className="icon">
         <img
           src={`https://openweathermap.org/img/wn/${
@@ -53,12 +54,16 @@ const Home = () => {
           alt="icon"
         />
       </div>
+
       <div className="temperatur">
-        Aktuell: {weatherData ? weatherData.main.temp.toFixed() : ""} °C
+        <p>Aktuell: {weatherData ? weatherData.main.temp.toFixed() : ""} °C</p>
       </div>
+
       <div className="windgeschwindigkeit">
-        Windgeschwindigkeit:
-        {weatherData ? (weatherData.wind.speed * 3.6).toFixed() : ""} km/h
+        <p>
+          Windgeschwindigkeit:{" "}
+          {weatherData ? (weatherData.wind.speed * 3.6).toFixed() : ""} km/h
+        </p>
       </div>
     </section>
   );

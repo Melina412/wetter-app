@@ -1,0 +1,34 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(37, 37, 37);
+  color: rgb(220, 220, 220);
+}
+
+section {
+  display: grid;
+  justify-items: center;
+  padding: 30px;
+  gap: 10px;
+
+  article.buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    button {
+      display: block;
+      background-color: rgb(107, 107, 107);
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+    }
+  }
+}
